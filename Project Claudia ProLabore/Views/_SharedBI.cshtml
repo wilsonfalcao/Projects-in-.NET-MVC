@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>.:Labore Monitor:.</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/css/cssbi/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="~/Content/css/cssbi/_all-skins.min.css">
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo Entrada -->
+        <a href="@Url.Action("Tela_RP","Login")" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>LABORE</b></span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>PRO </b>LABORE</span>
+        </a>
+        <!-- Barra Inicial Superior da Pagina  -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+            <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+            <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+            </div>
+        </nav>
+      </header>
+      <!-- Painel de Link a Esquerda (1) -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Painel de Identificação do usuário -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="~/img/imagens/boneco2.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>@ViewBag.Nome_User</p>
+              <a href="@Url.Action("Logout","Login")"><i class="fa fa-circle text-danger"></i> Lougout</a>
+              <a href="@Url.Action("Settings","Login")"><i class="fa fa-circle text-success"></i>Settings</a>
+            </div>
+          </div>
+          <!-- Painel geral do site -->
+          <ul class="sidebar-menu">
+            <li class="header">Painel de Navegação</li>
+              <!--Links de Serviços-->
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-gears"></i> <span>Configurações do Site</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="@Url.Action("Conf_Capa","Dashboard")"><i class="fa fa-circle-o"></i>Configuração de Capa</a></li>
+                    <li><a href="@Url.Action("Gerenciar_Tatics","Dashboard")"><i class="fa fa-circle-o"></i>Adicionar/Excluir Estatísticas</a></li>
+                    <li><a href="@Url.Action("Ad_Ex_Servicos","Dashboard")"><i class="fa fa-circle-o"></i>Adicionar/Excluir de Serviços</a></li>
+                    <li><a href="@Url.Action("Ad_Ex_Profissionais","Dashboard")"><i class="fa fa-circle-o"></i>Adicionar/Excluir Profissionais</a></li>
+                    <li><a href="@Url.Action("Carregar_Foto","Dashboard")"><i class="fa fa-circle-o"></i>Carregar fotos</a></li>
+                    <li><a href="@Url.Action("Gerenciar_Clientes", "Dashboard")"><i class="fa fa-circle-o"></i>Gerenciar Clientes</a></li>
+                    <li><a href="@Url.Action("Gerenciar_Usuario","Dashboard")"><i class="fa fa-circle-o"></i>Gerenciar Usuários</a></li>
+                    <li><a href="https://painelhost.uol.com.br/myProducts.html"><i class="fa fa-circle-o"></i>Gerenciar E-mail</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-line-chart"></i>
+                <span>Monitoramento</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+               
+              </ul>
+            </li>
+
+            <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentação</span></a></li>
+            <li><a href="@Url.Action("Index","Home")"><i class="fa fa-refresh"></i> <span>Página Home</span></a></li>
+            <li><a href="http://email.uolhost.com.br/prolaboresaude.com.br"><i class="fa fa-envelope"></i> <span>Web Mail</span></a></li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Área de Conteúdo (1) -->
+      <div class="content-wrapper">
+      <!-- Cabeçalho (1) -->
+        <section class="content-header">
+          <h1>
+            Principal
+            <small>Área de Visualização</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
+
+      <!-- Conteúdo Principal -->
+        <section class="content">
+        @RenderBody()
+        </section>
+      <!-- /.Conteúdo -->
+      </div>
+      <!-- /.Área de Conteúdo -->
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Home tab content -->
+          <div class="tab-pane" id="control-sidebar-home-tab">
+          </div>
+           <!-- /.tab-pane -->
+        </div>
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!--Roda Pé-->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Versão</b> 0.0.1
+        </div>
+        <strong>Copyright &copy;RD7 Tecnologia.</strong> Todos os Direitos Reservados.
+      </footer>
+      <div class="control-sidebar-bg"></div>
+    </div>
+      <!-- ./wrapper -->
+  </body>
+  <!--Bibliotecas-->
+  <!-- jQuery 1.11.1 -->
+  <script src="~/Content/js/jquery-1.11.3.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="~/Content/js/jsbi/query-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <!-- Bootstrap 3.3.5 -->
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Bootstrap WYSIHTML5 -->
+  <script src="~/Content/js/jsbi/bootstrap3-wysihtml5.all.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="~/Content/js/jsbi/app.min.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="~/Content/js/jsbi/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="~/Content/js/jsbi/demo.js"></script>
+</html>

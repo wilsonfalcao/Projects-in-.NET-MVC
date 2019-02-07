@@ -1,0 +1,77 @@
+﻿@model Projeto_Laboral.Body.Body_Site_Template
+@{
+    ViewBag.Title = "Gerenciar_Tatics";
+    Layout = "~/Views/_SharedBI.cshtml";
+}
+
+<!--CSS-->
+<link rel="stylesheet" href="~/Content/css/bootstrap3-wysihtml5.min.css">
+<!-- jQuery -->
+<script src="~/Content/js/jsbi/jquery-1.7.1.min.js"></script>
+<script src="~/Content/js/jsbi/jquery.validate.min.js"></script>
+<script src="~/Content/js/jsbi/jquery.validate.unobtrusive.min.js"></script>
+
+<!--Conteúdo Box Imagem-->
+<div class="row"> 
+<!--Lado Esquerdo-->       
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Cadastro de profissionais</h3>
+</div>
+@using (Html.BeginForm("Ad_Ex_Tatics_Post", "Dashboard", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div class="box-body">
+<div class="form-group">
+<label>Descrição de Estatística:</label>
+<input type="text" name="titulo" class="form-control" maxlength="30" />
+<label>Porcentagem:</label>
+<input type="range" name="porcent" min="0" max="100" value="50" id="fader" 
+	step="1" oninput="outputUpdate(value)">
+<output for="fader" id="volume">50</output>
+<div class="box-footer">
+<button type="submit" class="btn btn-primary">Enviar</button>
+</div>
+</div>
+</div>
+}
+</div>
+</section>
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Profissionais adicionados</h3>
+<div class="box-tools pull-right">
+<div class="has-feedback">
+<div class="btn-group">
+</div></div></div><!-- /.box-tools --></div><!-- /.box-header -->
+<div class="box-body no-padding">
+@*Controles do E-mailBox*@
+@*Layout de Exbição E-mail*@
+<div class="table-responsive mailbox-messages">
+<table class="table table-hover table-striped">
+<tbody>
+    @foreach(var _Data_ in Model.S8_Estatisticas as IEnumerable<Projeto_Laboral.Models.estatistica>)
+    {
+<tr>
+<td>@Html.ActionLink(" ","Ad_Ex_Tatics_Delete", "Dashboard", new { id = _Data_.id }, new {@class= "icon" })</td>
+<td class="mailbox-n ame"><b>@_Data_.titulo</b></td>
+<td class="mailbox-subject">@_Data_.percentagem</td>
+</tr>
+    }
+</tbody></table><!-- /.table --></div><!-- /.mail-box-messages --></div><!-- /.box-body -->
+<div class="box-footer no-padding">
+</div></div>
+</section>
+</div>
+
+<!--Script de Pagína-->
+<script type="text/javascript">
+    function outputUpdate(vol) {
+        document.querySelector('#volume').value = vol;
+    }
+</script>
+@if (ViewBag.Cadastro_State != "1")
+{
+    @Html.Partial("ModalAlert");
+}

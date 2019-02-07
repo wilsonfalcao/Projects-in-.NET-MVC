@@ -1,0 +1,26 @@
+﻿
+<div class="modal fade" id="alert" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Notificação de Ação</h4>
+        </div>
+        <div class="modal-body">
+          <p>Ação Realizada com @ViewBag.Cadastro_State.</p>
+            <footer>O dado foi inserido na tabela @ViewBag.Tabela</footer>
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <a href="@Url.Action("Index","Home")"><button class="btn btn-primary" data-dismiss="modal">Página Inícial</button></a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<script type="text/javascript">
+    $("#alert").modal("show");
+</script>
+

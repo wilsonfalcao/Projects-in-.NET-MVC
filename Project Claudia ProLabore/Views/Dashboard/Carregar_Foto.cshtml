@@ -1,0 +1,142 @@
+﻿@model Projeto_Laboral.Body.Body_Site_Template
+@{
+    ViewBag.Title = "Carregar_Foto";
+    Layout = "~/Views/_SharedBI.cshtml";
+}
+
+<!--CSS-->
+<link rel="stylesheet" href="~/Content/css/bootstrap3-wysihtml5.min.css">
+<!-- jQuery -->
+<script src="~/Content/js/jsbi/jquery-1.7.1.min.js"></script>
+<script src="~/Content/js/jsbi/jquery.validate.min.js"></script>
+<script src="~/Content/js/jsbi/jquery.validate.unobtrusive.min.js"></script>
+
+<!--Conteúdo Box Imagem-->
+<div class="row"> 
+<!--Lado Esquerdo-->       
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Carregar fotos</h3>
+</div>
+@using (Html.BeginForm("Ad_Ex_Foto_Post", "Dashboard", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div class="box-body">
+<div class="form-group">
+<label>Tipo de imagem:</label>
+<select id="type_dado5" class="form-control" name="Type" onchange="addtextbox()">
+<option value="0" selected></option>
+<option value="1">Foto do Computador</option>
+<option value="2">Foto da Web</option>
+<option value="3">Vídeo Web</option>
+</select>
+<p id="ctext5"></p>
+<label>Título</label>
+<input type="text" name="Title" class="form-control" required maxlength="40" />
+<label>Texto</label>
+<textarea name="Texto" class="form-control" required maxlength="100"></textarea>
+<div class="box-footer">
+<button type="submit" class="btn btn-primary" >Enviar</button>
+</div>
+</div>
+</div>
+}
+</div>
+</section>
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Fotos Publicadas</h3>
+<div class="box-tools pull-right">
+<div class="has-feedback">
+<div class="btn-group">
+</div></div></div><!-- /.box-tools --></div><!-- /.box-header -->
+<div class="box-body no-padding">
+@*Controles do E-mailBox*@
+@*Layout de Exbição E-mail*@
+<div class="table-responsive mailbox-messages">
+<table class="table table-hover table-striped">
+<tbody>
+    @foreach(var _Data_ in Model.S5_Galeria as IEnumerable<Projeto_Laboral.Models.exib_gallery>)
+    {
+<tr>
+<td>@Html.ActionLink(" ","Ad_Ex_Foto_Delete", "Dashboard", new { id = _Data_.id }, new {@class= "icon" })</td>
+<td class="mailbox-n ame"><a data-toggle="modal" data-target="#@_Data_.id"><i class="fa fa-eye"></i></a></td>
+<td class="mailbox-n ame"><b>@_Data_.title</b></td>
+<td class="mailbox-date">@_Data_.data</td>
+</tr>
+    if (_Data_.type == 1){ <div class="modal fade" id="@_Data_.id" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <img src="~/@_Data_.img" style="width:100%;"/>
+
+                <span class="gallery_item_preview">
+                    <a>
+                        <div class="font_modal">
+                            <h3>@_Data_.title</h3>
+                            <p>@_Data_.text</p>
+                        </div>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>}
+          if (_Data_.type == 2){ <div class="modal fade" id="@_Data_.id" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <img src="@_Data_.img" style="width:100%;"/>
+
+                <span class="gallery_item_preview">
+                    <a>
+                        <div class="font_modal">
+                            <h3>@_Data_.title</h3>
+                            <p>@_Data_.text</p>
+                        </div>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>}
+    if (_Data_.type == 3){<div class="modal fade" id="@_Data_.id" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <iframe style="width:100%;height:320px;" src="@_Data_.video"></iframe>
+                <span class="gallery_item_preview">
+                    <a>
+                        <div class="font_modal">
+                            <h3>@_Data_.title</h3>
+                            <p>@_Data_.text</p>
+                        </div>
+                    </a>
+            </div>
+        </div>
+    </div>}
+    }
+</tbody></table><!-- /.table --></div><!-- /.mail-box-messages --></div><!-- /.box-body -->
+<div class="box-footer no-padding">
+</div></div>
+</section>
+</div>
+
+<!--Script de Pagína-->
+<script type="text/javascript">
+      function addtextbox() {
+          var x = document.getElementById("type_dado5").value;
+          switch (x)
+          {
+              case ("1"): document.getElementById("ctext5").innerHTML = ""; document.getElementById("ctext5").innerHTML = "<label>Imagem Local:</label><input class='form-control' name='file_img' type='file'> "; break;
+              case ("2"): document.getElementById("ctext5").innerHTML = ""; document.getElementById("ctext5").innerHTML = "<label>Imagem Web:</label><input class='form-control' name='Img_Src_Gallery' type='url'> "; break;
+              case ("3"): document.getElementById("ctext5").innerHTML = ""; document.getElementById("ctext5").innerHTML = "<label>Vídeo Web:</label><input class='form-control' name='Video_URL' type='url'> "; break;
+
+              default: document.getElementById("ctext5").innerHTML = "";
+          }
+         
+      }
+</script>
+@if (ViewBag.Cadastro_State != "1")
+{
+    @Html.Partial("ModalAlert");
+}
