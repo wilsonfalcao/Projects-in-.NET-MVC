@@ -1,0 +1,44 @@
+﻿@model MvcApplication4.Controllers.Settings
+
+@{
+    ViewBag.Title = "Diario_Bordo";
+    Layout = "~/Views/_Shared.cshtml";
+}
+<!-- jQuery -->
+<script src="~/Content/js/jquery-1.7.1.min.js"></script>
+<script src="~/Content/js/jquery.validate.min.js"></script>
+<script src="~/Content/js/jquery.validate.unobtrusive.min.js"></script>
+<div class="row">        
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Alteração de Senha</h3>
+</div>
+    @using(Html.BeginForm("Settings","Login",FormMethod.Post))
+    {
+<div class="box-body">
+                    <div class="form-group">
+                    <label>Senha:</label>
+                    @Html.TextBoxFor(x5 => x5.Senha,new {@class="form-control", @name="senha", type="password"})
+
+                    <label>Repetir Senha:</label>
+                    @Html.TextBoxFor(x6 => x6.Conf_Senha,new {@class="form-control",@type="password"})
+                    
+                    </div>
+                  </div>
+                    <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <div>
+                       <span class="label label-danger"> @Html.ValidationMessageFor(xb1 => xb1.Senha)   </span>
+                            <span class="label label-danger"> @Html.ValidationMessageFor(xb2 => xb2.Conf_Senha)   </span>
+                            </div>
+</div>
+    }
+</div>
+</section>
+</div>
+@if (ViewBag.Cadastro_State == "Sucesso")
+{
+    @Html.Partial("ModalAlert");
+}
+

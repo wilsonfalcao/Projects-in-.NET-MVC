@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_moradaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cadastro_categoria">
+          <Key>
+            <PropertyRef Name="id_categoria" />
+            <PropertyRef Name="categoria" />
+          </Key>
+          <Property Name="id_categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoria" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cadastro_lugar">
+          <Key>
+            <PropertyRef Name="id_moradia" />
+          </Key>
+          <Property Name="id_moradia" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lugar_posicionamento" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="inquilino" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="data" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cadastro_usuario">
+          <Key>
+            <PropertyRef Name="id_user" />
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="id_user" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="tp_user" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="id_setor" Type="int" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="telefone" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="senha" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="online" Type="int" />
+          <Property Name="data" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="d_bordo_s1">
+          <Key>
+            <PropertyRef Name="ln" />
+            <PropertyRef Name="protocolo" />
+          </Key>
+          <Property Name="ln" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="protocolo" Type="bigint" Nullable="false" />
+          <Property Name="id_lugar" Type="int" Nullable="false" />
+          <Property Name="id_user" Type="bigint" Nullable="false" />
+          <Property Name="t_problema" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="problema" Type="text" Nullable="false" />
+          <Property Name="user_at" Type="bigint" Nullable="false" />
+          <Property Name="dt_at" Type="datetime" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="email">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="setor" Type="varchar" MaxLength="45" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="db_moradaModelStoreContainer">
+          <EntitySet Name="cadastro_categoria" EntityType="Self.cadastro_categoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cadastro_lugar" EntityType="Self.cadastro_lugar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cadastro_usuario" EntityType="Self.cadastro_usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="d_bordo_s1" EntityType="Self.d_bordo_s1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="email" EntityType="Self.email" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_moradaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cadastro_categoria">
+          <Key>
+            <PropertyRef Name="id_categoria" />
+            <PropertyRef Name="categoria" />
+          </Key>
+          <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cadastro_lugar">
+          <Key>
+            <PropertyRef Name="id_moradia" />
+          </Key>
+          <Property Name="id_moradia" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lugar_posicionamento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="inquilino" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="cadastro_usuario">
+          <Key>
+            <PropertyRef Name="id_user" />
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="id_user" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tp_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_setor" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="senha" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="online" Type="Int32" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="d_bordo_s1">
+          <Key>
+            <PropertyRef Name="ln" />
+            <PropertyRef Name="protocolo" />
+          </Key>
+          <Property Name="ln" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="protocolo" Type="Int64" Nullable="false" />
+          <Property Name="id_lugar" Type="Int32" Nullable="false" />
+          <Property Name="id_user" Type="Int64" Nullable="false" />
+          <Property Name="t_problema" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="problema" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_at" Type="Int64" Nullable="false" />
+          <Property Name="dt_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="email">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="setor" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="db_moradaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cadastro_categoria" EntityType="Self.cadastro_categoria" />
+          <EntitySet Name="cadastro_lugar" EntityType="Self.cadastro_lugar" />
+          <EntitySet Name="cadastro_usuario" EntityType="Self.cadastro_usuario" />
+          <EntitySet Name="d_bordo_s1" EntityType="Self.d_bordo_s1" />
+          <EntitySet Name="email" EntityType="Self.email" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_moradaModelStoreContainer" CdmEntityContainer="db_moradaEntities">
+          <EntitySetMapping Name="cadastro_categoria">
+            <EntityTypeMapping TypeName="db_moradaModel.cadastro_categoria">
+              <MappingFragment StoreEntitySet="cadastro_categoria">
+                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+                <ScalarProperty Name="categoria" ColumnName="categoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cadastro_lugar">
+            <EntityTypeMapping TypeName="db_moradaModel.cadastro_lugar">
+              <MappingFragment StoreEntitySet="cadastro_lugar">
+                <ScalarProperty Name="id_moradia" ColumnName="id_moradia" />
+                <ScalarProperty Name="lugar_posicionamento" ColumnName="lugar_posicionamento" />
+                <ScalarProperty Name="inquilino" ColumnName="inquilino" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cadastro_usuario">
+            <EntityTypeMapping TypeName="db_moradaModel.cadastro_usuario">
+              <MappingFragment StoreEntitySet="cadastro_usuario">
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="tp_user" ColumnName="tp_user" />
+                <ScalarProperty Name="id_setor" ColumnName="id_setor" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+                <ScalarProperty Name="online" ColumnName="online" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="d_bordo_s1">
+            <EntityTypeMapping TypeName="db_moradaModel.d_bordo_s1">
+              <MappingFragment StoreEntitySet="d_bordo_s1">
+                <ScalarProperty Name="ln" ColumnName="ln" />
+                <ScalarProperty Name="protocolo" ColumnName="protocolo" />
+                <ScalarProperty Name="id_lugar" ColumnName="id_lugar" />
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+                <ScalarProperty Name="t_problema" ColumnName="t_problema" />
+                <ScalarProperty Name="problema" ColumnName="problema" />
+                <ScalarProperty Name="user_at" ColumnName="user_at" />
+                <ScalarProperty Name="dt_at" ColumnName="dt_at" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="email">
+            <EntityTypeMapping TypeName="db_moradaModel.email">
+              <MappingFragment StoreEntitySet="email">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="email1" ColumnName="email" />
+                <ScalarProperty Name="setor" ColumnName="setor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

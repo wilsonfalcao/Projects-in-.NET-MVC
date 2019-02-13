@@ -1,0 +1,43 @@
+﻿@model MvcApplication4.Controllers.Body_
+@{
+    ViewBag.Title = "Cadastro_Lugar";
+    Layout = "~/Views/_Shared.cshtml";
+}
+
+<!-- jQuery -->
+    <script src="~/Content/js/jquery-1.7.1.min.js"></script>
+    <script src="~/Content/js/jquery.validate.min.js"></script>
+    <script src="~/Content/js/jquery.validate.unobtrusive.min.js"></script>
+<div class="row">        
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Cadastro de Lugar</h3>
+</div>
+    @using(Html.BeginForm("Cadastro_Email1","Servicos",FormMethod.Post,null))
+    {
+<div class="box-body">
+                    <div class="form-group">
+                      <label>Nome:</label>
+                        @Html.TextBoxFor(x1 => x1.Nome_User,new {@class="form-control", @name="nome", @placeholder="Nome Completo"})
+                        <label>E-mail:</label>
+                        @Html.TextBoxFor(x2 => x2.Email_Setor,new {@class="form-control", @name="email", @placeholder="nome@dominio.com/com.br"})
+                        <label>Setor:</label>
+                       @Html.TextBoxFor(x2 => x2.Setor,new {@class="form-control", @name="email", @placeholder="Numeros ou Letras"})
+                        </div>
+                  </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    @Html.ValidationSummary(true)
+                    <span class="label label-danger">@Html.ValidationMessageFor(xb1 => xb1.Nome_User)</span>
+                    <span class="label label-danger">@Html.ValidationMessageFor(xb2 => xb2.Email)</span>
+                    <span class="label label-danger">@Html.ValidationMessageFor(xb4 => xb4.Numero)</span>
+</div>
+    }
+</div>
+</section>
+</div>
+@if (ViewBag.Cadastro_State == "Sucesso")
+{
+    @Html.Partial("ModalAlert")
+}

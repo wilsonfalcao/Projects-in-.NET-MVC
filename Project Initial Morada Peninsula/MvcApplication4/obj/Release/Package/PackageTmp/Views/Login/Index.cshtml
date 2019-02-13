@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciador - Login</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style-site2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+            <div><img id="imagem1" class="imagem" src="~/imagem/logo_menor.jpg"></div>
+                        </div>
+                        		
+		<br>
+		<div class="login">
+            @using (Html.BeginForm("L_Auten", "Login", FormMethod.Post))
+            {
+                <input type="text" placeholder="usuário" name="usuario"><br>
+				<input type="password" placeholder="senha" name="senha"><br>
+				<input type="submit" value="Login">
+            }
+			@Html.ValidationMessage("")	
+		</div>
+
+
+       <div class="foot">
+           <div>Sistema de Gerenciamento Web</div>
+       </div>
+</body>
+
+</html>

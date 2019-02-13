@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="db_moradaEntities-Web.config Connection String" description="db_moradaEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Banco_DB.csdl|res://*/Models.Banco_DB.ssdl|res://*/Models.Banco_DB.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=bdpeninsula.database.windows.net;initial catalog=db_morada;user id=access;password=Gpoz33@@;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\pcr-27929\\OneDrive\\App\ Claudia\ WEB\ G\\MvcApplication4\\MvcApplication4\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='db_moradaEntities']/@connectionString" />
+  </parameter>
+</parameters>

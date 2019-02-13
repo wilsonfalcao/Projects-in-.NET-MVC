@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cond_peninsulaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cadastro_lugar">
+    <Key>
+      <PropertyRef Name="id_moradia" />
+    </Key>
+    <Property Name="id_moradia" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lugar_posicionamento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="inquilino" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numero_moradia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="data" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cadastro_usuario">
+    <Key>
+      <PropertyRef Name="id_user" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="id_user" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tp_user" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_setor" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="senha" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="data" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="d_bordo_s1">
+    <Key>
+      <PropertyRef Name="ln" />
+      <PropertyRef Name="protocolo" />
+    </Key>
+    <Property Name="ln" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="protocolo" Type="Int64" Nullable="false" />
+    <Property Name="id_lugar" Type="Int32" Nullable="false" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+    <Property Name="t_problema" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="problema" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_at" Type="Int64" Nullable="false" />
+    <Property Name="dt_at" Type="DateTime" Nullable="false" />
+    <Property Name="data" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="setores">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="setor" />
+      <PropertyRef Name="ramal" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="setor" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="owner" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ramal" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="qtd_pessoas" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="data" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="cond_peninsulaEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cadastro_lugar" EntityType="Self.cadastro_lugar" />
+    <EntitySet Name="cadastro_usuario" EntityType="Self.cadastro_usuario" />
+    <EntitySet Name="d_bordo_s1" EntityType="Self.d_bordo_s1" />
+    <EntitySet Name="setores" EntityType="Self.setores" />
+  </EntityContainer>
+</Schema>

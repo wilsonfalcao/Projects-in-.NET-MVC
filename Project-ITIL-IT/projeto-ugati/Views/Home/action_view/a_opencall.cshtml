@@ -1,0 +1,115 @@
+﻿<div class="modal-content">
+<div class="close-modal" data-dismiss="modal">
+<i class="fa fa-arrow-circle-o-left"></i>
+</div>
+<div class="containerview">
+<h1>Open Call / Abertura de Chamado</h1>
+
+<div class="area1">
+<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+<li class="active"><a href="#identify" data-toggle="tab">Origem</a></li>
+<li><a href="#call" data-toggle="tab">Chamado</a></li>
+<li><a href="#where" data-toggle="tab">Destino</a></li>
+</ul>
+<form class="form-inline" id="formchamado" role="form" method="post">
+<div id="my-tab-content" class="tab-content">
+<div class="tab-pane active" id="identify">
+    <div class="form-group">
+    <label for="nome">Nome do Usuário:</label>
+    <input class="form-control" id="nome">
+    <label for="pid">PID:</label>
+    <input type="number"class="form-control" id="pid">
+        </div>
+    
+     @*PROPRIEDADES 2*@
+    <div class="form-group">
+        <label for="local">Local:</label>
+    <select class="form-control" id="local">
+        <option>Cras - Santo Amaro</option>
+    </select>
+     <label for="email">E-mail:</label>
+    <input type="email"class="form-control" id="email">
+        </div>
+</div>
+<div class="tab-pane" id="call">
+    <div class="form-group">
+    <label for="tp_chamado">Tipo de Chamado:</label>
+    <select class="form-control" id="tp_chamado">
+        <option>Incidente</option>
+        <option>Solicitação</option>
+    </select>
+    <label for="tp_problema">Tipo do Problema:</label>
+    <select class="form-control" id="tp_problema">
+        <option>Falha</option>
+        <option>Erro</option>
+        <option selected>Requisição de Serviços de T.I</option>
+        <option>Requisição de Serviços de Infraestrutura</option>
+        <option>Requisição de Informação</option>
+        <option>Notificação de Monitoramento</option>
+    </select>
+    <label for="t_problema">Título do Problema:</label>
+    <input type="text"class="form-control" id="t_problema">
+        <label for="status">Status:</label>
+    <select class="form-control" id="status">
+        <option>Andamento</option>
+        <option>Urgência</option>
+        <option selected>Espera</option>
+        <option>Concluído</option>
+        <option>Fechado</option>
+    </select>
+    <label class="col-sm-12">Descrição do Problema:</label>
+    <textarea class="form-control" id="texto"></textarea>
+    <input type="file" /><input type="file"/>
+        </div>
+ 
+</div>
+<div class="tab-pane" id="where">
+    <div class="form-group">
+        <label for="tecnico">Técnico:</label>
+        <select class="form-control" id="tecnico">
+            <option>Wilson</option>
+            <option>Otávio</option>
+            <option>Amaury</option>
+            <option>Diego</option>
+            <option>Adonias</option>
+            <option selected>Automático</option>
+        </select>
+        <label for="area">Área:</label>
+        <select class="form-control" id="area">
+            <option selected>Infra</option>
+            <option>T.I</option>
+            <option>Coordenação</option>
+            <option>Gerência</option>
+        </select>
+        <label for="tomb">Tombamento:</label>
+        <input type="number" class="form-control" id="tomb"/>
+        <div class="foot-button">
+        <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+    </div>
+</div>
+
+</div>
+    <br />
+<!--Protocolo--> 
+<input class="form-control"type="text" value="2016080112410210" id="protocolo" disabled/>
+</form>
+</div>
+
+</div>
+
+</div>
+<script type="text/javascript">
+    var tt = $("#formchamado");
+    $("#formchamado").submit(function() {
+        var customer = {
+            protocolo: "654784554"
+        };
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(customer),
+            url: "http://localhost:53565/api/Registro_Chamado/POSTabrir_chamado/",
+            contentType: "application/json"
+        });
+    });
+</script>

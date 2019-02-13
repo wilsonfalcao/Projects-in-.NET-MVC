@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cond_peninsulaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cadastro_moradia">
+    <Key>
+      <PropertyRef Name="id_moradia" />
+    </Key>
+    <Property Name="id_moradia" Type="bigint" Nullable="false" />
+    <Property Name="lugar_posicionamento" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="inquilino" Type="bigint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="telefone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="numero_moradia" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="data" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cadastro_usuario">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="bigint" Nullable="false" />
+    <Property Name="tp_user" Type="int" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="telefone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="senha" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="data" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="d_bordo_s1">
+    <Key>
+      <PropertyRef Name="ln" />
+      <PropertyRef Name="protocolo" />
+    </Key>
+    <Property Name="ln" Type="bigint" Nullable="false" />
+    <Property Name="protocolo" Type="bigint" Nullable="false" />
+    <Property Name="id_apt" Type="int" Nullable="false" />
+    <Property Name="id_user" Type="int" Nullable="false" />
+    <Property Name="t_problema" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="problema" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="data" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="cond_peninsulaModelStoreContainer">
+    <EntitySet Name="cadastro_moradia" EntityType="Self.cadastro_moradia" Schema="cond_peninsula" store:Type="Tables" />
+    <EntitySet Name="cadastro_usuario" EntityType="Self.cadastro_usuario" Schema="cond_peninsula" store:Type="Tables" />
+    <EntitySet Name="d_bordo_s1" EntityType="Self.d_bordo_s1" Schema="cond_peninsula" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

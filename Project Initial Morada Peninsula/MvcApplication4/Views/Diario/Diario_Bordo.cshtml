@@ -1,0 +1,97 @@
+﻿@model MvcApplication4.Controllers.Body_
+
+@{
+    ViewBag.Title = "Diario_Bordo";
+    Layout = "~/Views/_Shared.cshtml";
+}
+<!--CSS-->
+<link rel="stylesheet" href="~/Content/css/bootstrap3-wysihtml5.min.css">
+<!-- jQuery -->
+<script src="~/Content/js/jquery-1.7.1.min.js"></script>
+<script src="~/Content/js/jquery.validate.min.js"></script>
+<script src="~/Content/js/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/js/bootstrap3-wysihtml5.all.min.js"></script>
+<div class="row">        
+<section class="col-md-5 connectedSortable">
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Criar Diário de Bordo</h3>
+</div>
+ @using (Html.BeginForm("Diario_Bordo", "Diario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+<div class="box-body">
+<div class="form-inline">
+<div class="col-xs-6">
+                      <label>Protocolo:</label>
+                        <input type="text" class="form-control input-xs" name="protocolo" value="@ViewBag.Protocolo" disabled />
+
+</div>
+<div class="col-xs-6">
+                            <label>Data:</label>
+                         <input type="date" class="form-control" name="data" value="@ViewBag.Data" disabled />
+    </div>
+</div>
+<div class="form-group">
+                      <label>Lugar:</label>
+                        <select class="form-control" name="selectlugar" required>
+                            <option value="" selected></option>
+                            @foreach(var Categoria in Model.Categorias_Select as IEnumerable<MvcApplication4.Models.cadastro_categoria>)
+                            {
+                                 <option value="@Categoria.id_categoria">@Categoria.categoria</option>
+                            }
+                        </select>
+                        <label>Assunto:</label>
+                        <input type="text" class="form-control input-xs" name="tproblema" required maxlength="100" />
+                         </div>
+<div class="form-group">
+<label>Relato:</label>
+<div class="box-body pad">
+<textarea class="textarea" name="texto" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
+<div id="msg"></div>
+<button onclick="countchar()">click</button>
+</div>
+</div>
+<div class="form-group">
+<label>Desejar em viar uma copiar por E-mail?</label>
+<select id="emailmarketing" class="form-control" name="marketingemail" onchange="addtextbox()">
+<option value="0" selected></option>
+<option value="1">Apenas EU</option>
+<option value="2">Grupo</option>
+<option value="3">Outros...</option>
+</select>
+<p id="ctext"></p>
+</div>
+</div>
+<div class="box-footer">
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</div>
+ }
+</div>
+</section>
+</div>
+<script type="text/javascript">
+      $(function () {
+        //bootstrap WYSIHTML5 - text editor
+        $(".textarea").wysihtml5();
+      });
+      function addtextbox() {
+          var x = document.getElementById("emailmarketing").value;
+          if (x == "3") {
+              document.getElementById("ctext").innerHTML = "<label>E-mail:</label><input placeholder='nome@dominio.com.br' class='form-control' name='emailtxt' type='text'> ";
+          }
+          else { document.getElementById("ctext").innerHTML = ""; }
+      }
+      function countchar() {
+          var contar = document.getElementById("textarea").value.length;
+          if (contar > 0) {
+              document.getElementById("msg").innerHTML = "<label>" + contar + "</label>";
+          }
+          else {
+              document.getElementById("msg").innerHTML = "";
+          }
+      }
+</script>
+@if (ViewBag.Cadastro_State == "Sucesso")
+{
+    @Html.Partial("ModalAlert");
+}

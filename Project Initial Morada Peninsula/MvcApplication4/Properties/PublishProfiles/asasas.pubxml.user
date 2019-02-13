@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\User\Desktop\Projeto Claudia App\P.04021027</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/11/2016 15:25:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/11/2016 10:01:59</publishTime>
+    </File>
+    <File Include="bin/MvcApplication4.dll">
+      <publishTime>02/04/2017 16:21:48</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>08/29/2014 01:11:46</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/11/2016 10:01:59</publishTime>
+    </File>
+    <File Include="bin/System.Net.dll">
+      <publishTime>09/26/2012 03:16:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>09/26/2012 03:16:08</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/11/2016 10:02:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/11/2016 10:02:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/11/2016 10:02:00</publishTime>
+    </File>
+    <File Include="Content/css/AdminLTE.min.css">
+      <publishTime>02/18/2016 12:01:55</publishTime>
+    </File>
+    <File Include="Content/css/all.css">
+      <publishTime>01/14/2016 15:27:33</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css.map">
+      <publishTime>01/11/2016 12:28:04</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>02/03/2016 12:46:19</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap3-wysihtml5.min.css">
+      <publishTime>01/26/2016 16:03:39</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>01/12/2016 15:11:18</publishTime>
+    </File>
+    <File Include="Content/css/style-site2.css">
+      <publishTime>01/11/2016 15:14:31</publishTime>
+    </File>
+    <File Include="Content/css/_all-skins.min.css">
+      <publishTime>01/12/2016 14:15:55</publishTime>
+    </File>
+    <File Include="Content/js/app.min.js">
+      <publishTime>01/12/2016 14:19:07</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.js">
+      <publishTime>01/11/2016 12:29:20</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.min.js">
+      <publishTime>01/11/2016 12:29:20</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap3-wysihtml5.all.min.js">
+      <publishTime>01/12/2016 14:18:46</publishTime>
+    </File>
+    <File Include="Content/js/dashboard.js">
+      <publishTime>01/12/2016 14:19:20</publishTime>
+    </File>
+    <File Include="Content/js/demo.js">
+      <publishTime>01/12/2016 14:19:53</publishTime>
+    </File>
+    <File Include="Content/js/jquery-1.11.1.min.js">
+      <publishTime>01/18/2016 17:31:54</publishTime>
+    </File>
+    <File Include="Content/js/jquery-1.7.1.min.js">
+      <publishTime>01/20/2016 12:40:29</publishTime>
+    </File>
+    <File Include="Content/js/jQuery-2.1.4.min.js">
+      <publishTime>01/12/2016 14:27:22</publishTime>
+    </File>
+    <File Include="Content/js/jquery-ui.min.js">
+      <publishTime>01/12/2016 15:11:07</publishTime>
+    </File>
+    <File Include="Content/js/jquery.inputmask.js">
+      <publishTime>01/15/2016 11:36:51</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.js">
+      <publishTime>01/18/2016 11:30:52</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.min.js">
+      <publishTime>01/18/2016 11:23:46</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.unobtrusive.js">
+      <publishTime>01/18/2016 11:30:52</publishTime>
+    </File>
+    <File Include="Content/js/jquery.validate.unobtrusive.min.js">
+      <publishTime>01/20/2016 12:01:04</publishTime>
+    </File>
+    <File Include="Content/js/modal.js">
+      <publishTime>01/25/2016 13:52:46</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/11/2016 10:01:55</publishTime>
+    </File>
+    <File Include="imagem/background.jpg">
+      <publishTime>01/11/2016 10:12:53</publishTime>
+    </File>
+    <File Include="imagem/logo_menor.jpg">
+      <publishTime>01/11/2016 10:13:23</publishTime>
+    </File>
+    <File Include="imagem/user.jpg">
+      <publishTime>01/12/2016 14:23:30</publishTime>
+    </File>
+    <File Include="Models/Model2.edmx.diagram">
+      <publishTime>02/04/2017 16:16:43</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/11/2016 15:25:07</publishTime>
+    </File>
+    <File Include="Views/Diario/Diario_Bordo.cshtml">
+      <publishTime>02/01/2017 15:15:19</publishTime>
+    </File>
+    <File Include="Views/Diario/Diario_Bordo_Atualizar.cshtml">
+      <publishTime>02/22/2016 18:41:52</publishTime>
+    </File>
+    <File Include="Views/Diario/Diario_Bordo_C.cshtml">
+      <publishTime>02/03/2017 10:27:54</publishTime>
+    </File>
+    <File Include="Views/Diario/Diario_Bordo_Leituras.cshtml">
+      <publishTime>02/22/2016 18:27:40</publishTime>
+    </File>
+    <File Include="Views/Diario/ModalAlert.cshtml">
+      <publishTime>03/10/2016 18:14:09</publishTime>
+    </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>01/13/2016 15:42:50</publishTime>
+    </File>
+    <File Include="Views/Login/ModalAlert.cshtml">
+      <publishTime>03/10/2016 18:15:13</publishTime>
+    </File>
+    <File Include="Views/Login/Settings.cshtml">
+      <publishTime>03/10/2016 18:09:41</publishTime>
+    </File>
+    <File Include="Views/Login/Tela_RP.cshtml">
+      <publishTime>01/31/2017 08:47:47</publishTime>
+    </File>
+    <File Include="Views/Servicos/Cadastro_Categoria.cshtml">
+      <publishTime>03/09/2016 15:54:12</publishTime>
+    </File>
+    <File Include="Views/Servicos/Cadastro_Email.cshtml">
+      <publishTime>02/17/2016 18:30:41</publishTime>
+    </File>
+    <File Include="Views/Servicos/Cadastro_Setor.cshtml">
+      <publishTime>03/01/2016 11:32:16</publishTime>
+    </File>
+    <File Include="Views/Servicos/Cadastro_Usuario.cshtml">
+      <publishTime>03/02/2016 11:51:04</publishTime>
+    </File>
+    <File Include="Views/Servicos/Consultar_User.cshtml">
+      <publishTime>02/18/2016 12:05:17</publishTime>
+    </File>
+    <File Include="Views/Servicos/ModalAlert.cshtml">
+      <publishTime>03/10/2016 18:16:04</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>01/11/2016 10:01:55</publishTime>
+    </File>
+    <File Include="Views/_Shared.cshtml">
+      <publishTime>03/10/2016 18:40:27</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/04/2017 16:21:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

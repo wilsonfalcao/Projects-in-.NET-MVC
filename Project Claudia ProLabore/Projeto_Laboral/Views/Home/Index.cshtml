@@ -1,0 +1,700 @@
+﻿@model Projeto_Laboral.Body.Body_Site_Template
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>.:Pro Labore:.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/css/normalize.css">
+    <link rel="stylesheet" href="~/Content/css/main.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="~/Content/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/Content/css/responsive.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/style_photo.css">
+    <link href='http://fonts.googleapis.com/css?family=Leckerli+One|Metrophobic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <!-- start preloader -->
+    <div id="loader-wrapper">
+        <div class="logo"></div>
+        <div id="loader">
+        </div>
+    </div>
+    <!-- end preloader -->
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Inicio de Cabeçalho -->
+    <header class="main_menu_sec navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <!--Logo da empresa em menor tamanho (top-left)-->
+                <div class="col-lg-3 col-md-3 col-sm-2">
+                    <div class="lft_hd">
+                        <a href="index.html"><img src="~/img/imagens/logo5.png" alt="" /></a>
+                    </div>
+                </div>
+                <!--Area de Menu-->
+                <div class="col-lg-9 col-md-9 col-sm-10">
+                    <div class="rgt_hd">
+                        <div class="main_menu">
+                            <nav id="nav_menu">
+                                <!-- Barra de Menu Principal (top-righ)para responisividade-->
+                                <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <!-- Barra de Menu Principal (top-left)-->
+                                <div id="navbar">
+                                    <ul>
+                                        <li><a class="page-scroll" href="index.html">Home</a></li>
+                                        <li><a class="page-scroll" href="#abt_sec">Sobre</a></li>
+                                        <li><a class="page-scroll" href="#pr_sec">Serviços</a></li>
+                                        <li><a class="page-scroll" href="#tm_sec">Profissionais</a></li>
+                                        <li><a class="page-scroll" href="#lts_sec">Galeria</a></li>
+                                        <li><a class="page-scroll" href="#clt_sec">Empresas</a></li>
+                                        <li><a class="page-scroll" href="#ctn_sec">Contato</a></li>
+                                        <li><a class="page-scroll" href="">Login</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Inicio de Slider -->
+    <section id="slider_sec" style="background-image : url(/../@Model.S1_Home.img_home);
+background-position : center center;
+background-repeat : no-repeat;
+width: 100%;
+height: 700px;">
+        <div class="container">
+            <div class="row">
+                <div class="slider">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="wrap_caption">
+                                    <div class="caption_carousel">
+                                        <h1>@Model.S1_Home.titulo</h1>
+                                        <p>@Model.S1_Home.text</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wrap_caption">
+                                    <div class="caption_carousel">
+                                        <h1>@Model.S1_Home.titulo2</h1>
+                                        <p>@Model.S1_Home.text2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item ">
+                                <div class="wrap_caption">
+                                    <div class="caption_carousel">
+                                        <h1>@Model.S1_Home.titulo3</h1>
+                                        <p>@Model.S1_Home.text3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fim -->
+
+    <!-- Inicio da section Sobre -->
+    <section id="abt_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>Sobre a Empresa</h1>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="abt">
+                        <!--Conteúdo do Sobre-->
+                        <p class="abt">
+                            @Model.S1_Home.sobre
+                        </p>
+
+                        <!--Conteúdo Instituicional-->
+                    </div>
+                    <div style="margin-top: 24px;">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="sngl_pricing">
+                                <h2 class="title_bg_1">Missão</h2>
+                                <p>
+                                    Transformar e potencializar a saúde empresarial, prezar pela saúde do
+                                    trabalhador, prevenir lesões ocupacionais e reduzir o absenteísmo. Além
+                                    de promover ambientes de trabalho mais humanos e seguros.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="sngl_pricing">
+                                <h2 class="title_bg_2">Valores</h2>
+                                <p>
+                                    Prestar serviços dentro da ética profissional, seguindo as Normas e
+                                    Legislações Trabalhistas, com alto nível de produtividade, qualidade,
+                                    seriedade e segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="sngl_pricing">
+                                <h2 class="title_bg_3">Visão</h2>
+                                <p>Sermos referência nacional em promoção e prevenção da saúde empresarial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Backup-->
+    <!-- <section id="counting_sec">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counting_sl">
+                <i class="fa fa-user"></i>
+                <h2 class="counter">43,753</h2>
+                <h4>Happy Clients</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counting_sl">
+                <i class="fa fa-desktop"></i>
+                <h2 class="counter">20,210</h2>
+                <h4>Complete Project</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counting_sl">
+                <i class="fa fa-ticket"></i>
+                <h2 class="counter">43,753</h2>
+                <h4>Answered Tickets</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="counting_sl">
+                <i class="fa fa-clock-o"></i>
+                <h2 class="counter">45,105</h2>
+                <h4>Development Hours</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>-->
+    <!-- Inicio da section Beneficios-->
+    <section id="skill_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>Resultados Alcançados</h1>
+                        <h2>Porque devemos realizar Ginástica Elaboral?</h2>
+                    </div>
+                </div>
+                <div class="skills progress-bar1">
+                    <ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInLeft">
+                        <li class="progress">
+                            <div class="progress-bar" data-width="85">
+                                Wordpress 85%
+                            </div>
+                        </li>
+                        <li class="progress">
+                            <div class="progress-bar" data-width="65">
+                                Graphic Design 65%
+                            </div>
+                        </li>
+                        <li class="progress">
+                            <div class="progress-bar" data-width="90">
+                                HTML/CSS Design 90%
+                            </div>
+                        </li>
+                        <li class="progress">
+                            <div class="progress-bar" data-width="60">
+                                SEO 60%
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
+                        <li class="progress">
+                            <div class="progress-bar" data-width="75">
+                                Agencying 75%
+                            </div>
+                        </li>
+                        <li class="progress">
+                            <div class="progress-bar" data-width="95">
+                                App Development 95%
+                            </div>
+                        </li>
+                        <li class="progress">
+                            <div class="progress-bar" data-width="70">
+                                IT Consultency 70%
+                            </div>
+                        </li>
+                        <li class="progress">
+                            <div class="progress-bar" data-width="90">
+                                Theme Development 90%
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- start Serviços Section -->
+    <section id="pr_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>O que fazemos</h1>
+                        <h2>Nossas atividades</h2>
+                    </div>
+                </div>
+                @foreach(var Dados in Model.S3_Servicos as IEnumerable<Projeto_Laboral.Models.exibition_atv>)
+                {
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="box_service">
+                        <img src="@Dados.img_serv">
+                        <h2 class="title_box">@Dados.text</h2>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Final da section Serviços-->
+
+    <!-- Inicio Profissionais -->
+    <section id="tm_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>Our Team</h1>
+                        <h2>WE’RE BRANDING & DIGITAL STUDIO FROM VIET NAM</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+                    <div class="all_team">
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt="" />
+                            <h3> Jamie Catllahan <span>Designer</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt="" />
+                            <h3>Lisa Kudrow <span> Manager </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt="" />
+                            <h3> John Clarance <span>   Senior Manager   </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-4.png" alt="" />
+                            <h3>Sheena Maya<span> Developer </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt="" />
+                            <h3> Jamie Catllahan <span>Designer</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt="" />
+                            <h3>Lisa Kudrow <span> Manager </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt="" />
+                            <h3> John Clarance <span>   Senior Manager   </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-4.png" alt="" />
+                            <h3>Sheena Maya<span> Developer </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-1.png" alt="" />
+                            <h3> Jamie Catllahan <span>Designer</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-2.png" alt="" />
+                            <h3>Lisa Kudrow <span> Manager </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-3.png" alt="" />
+                            <h3> John Clarance <span>   Senior Manager   </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                        <div class="sngl_team">
+                            <img src="http://wedesignthemes.com/themes/dt-mountcool/wp-content/uploads/2015/10/img-4.png" alt="" />
+                            <h3>Sheena Maya<span> Developer </span></h3>
+                            <p>Lorem ipsum dolor sit amet, consecttur adipisicing elit. Laudant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fim -->
+
+    <!-- Comentarios de clientes -->
+    <!--
+    <section id="tstm_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="all_tstm">
+
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>what people say?</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+                            <h6>- jhon deo</h6>
+                        </div>
+                    </div>
+
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Clien Design</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+                            <h6>- shura deo</h6>
+                        </div>
+                    </div>
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Awesome Support SIMA</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+                            <h6>- kumara deo</h6>
+                        </div>
+                    </div>
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Theme Feature great</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+                            <h6>- dhera deo</h6>
+                        </div>
+                    </div>
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>Non conflict</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+                            <h6>- jhon deo</h6>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <!--Section da Galeria-->
+    <section id="lts_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>Galeria de Imagem</h1>
+                        <h2>Nosso de registro de atividades</h2>
+                    </div>
+                </div>
+                <div class="campo">
+                    <div class="campo_inner">
+                        <!-- Gallery -->
+                        <section class="gallery">
+                            @foreach (var Dados in Model.S5_Galeria as IEnumerable<Projeto_Laboral.Models.exib_gallery>)
+                            {
+                            if(Dados.type == 1)
+                            {
+                            <div class="gallery_item">
+                            <span class="gallery_item_preview">
+                            <a href="#" data-js="@Dados.id">
+                            <svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+                            <path d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z"></path>
+                            </svg>
+                            <img src="@Dados.img" alt="" /><span>
+                            <h3>@Dados.title</h3>
+                            <p>@Dados.text</p>
+                            </span>
+                            </a>
+                            </span>
+                            <div data-lk="@Dados.id" class="gallery_item_full">
+                            <div class="box">
+                            <img src="@Dados.img" alt="" />
+                            <h3>@Dados.title</h3>
+                            <p>@Dados.text</p>
+                            </div>
+                            </div>
+                            </div>
+                            }
+                            else
+                            {
+                            
+                                 <!-- Gallery  item -->
+      <div class="gallery_item">
+        <!-- Gallery  item preview -->
+        <span class="gallery_item_preview">
+          <a href="#" data-js="@Dados.id">
+            <svg fill="#5690F7" class="gallery_top" viewbox="0 3 60 20">
+              <path d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z"></path>
+            </svg>
+            <img src="@Dados.img" alt="" /><span>
+            <h3>@Dados.title</h3>
+            <p>@Dados.text</p>
+
+            </span></a>
+        </span>
+        <!-- Gallery  item full -->
+        <div data-lk="@Dados.id" class="gallery_item_full">
+          <div class="box">
+
+            <div class="video">
+              <iframe src="@Dados.video"></iframe>
+            </div>
+
+            <h3>@Dados.title</h3>
+            <p>@Dados.text</p>
+          </div>
+        </div>
+      </div>
+                                
+                            }
+                            }
+                        </section>
+                    </div>
+                </div>
+                <div class="post_btn">
+                    <div class="hover_effect_btn" id="hover_effect_btn">
+                        <a href="" data-hover="view more post"><span>veja mais</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Fim-->
+    <!-- Section tablea de preço Backuo -->
+    <!--
+    <section id="pricing_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="sngl_pricing">
+                        <h2 class="title_bg_1">Missão</h2>
+                        <p>
+    Transformar e potencializar a saúde empresarial, prezar pela saúde do
+    trabalhador, prevenir lesões ocupacionais e reduzir o absenteísmo. Além
+    de promover ambientes de trabalho mais humanos e seguros.
+    </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="sngl_pricing">
+                        <h2 class="title_bg_2">Valores</h2>
+                        <p>Prestar serviços dentro da ética profissional, seguindo as Normas e
+    Legislações Trabalhistas, com alto nível de produtividade, qualidade,
+    seriedade e segurança.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="sngl_pricing">
+                        <h2 class="title_bg_3">Visão</h2>
+                        <p>Sermos referência nacional em promoção e prevenção da saúde empresarial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- Section Clientes da empresa -->
+    <section id="clt_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>Nossos Clientes</h1>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+                    <div class="al_clt">
+                        <div class="sngl_clt">
+                            <a href=""><img src="http://www.tce.pe.gov.br/internet/images/logotce.png" alt="" /></a>
+                        </div>
+                        <div class="sngl_clt">
+                            <a href=""><img class="sngl_clt" src="http://seeklogo.com/images/P/prefeitura-do-recife-logo-572D6414A5-seeklogo.com.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fim-->
+
+    <!-- Section Contato -->
+    <section id="ctn_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                    <div class="title_sec">
+                        <h1>Contatos</h1>
+                        <h2>Estamos disponíveis para tirar a sua dúvida, entre em contato conosco</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="cnt_form">
+                        <form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control name-field" required="required" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control mail-field" required="required" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="cnt_info">
+                        <ul>
+                            <li><i class="fa fa-facebook"></i><p>121 King Street, Melbourne Victoria 3000 Australia</p></li>
+                            <li><i class="fa fa-envelope"></i><p>contact@info.com</p></li>
+                            <li><i class="fa fa-phone"></i><p>+0987654321 (+012345678)</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End contact us  Section -->
+
+    <!-- Section Map Backuo -->
+    <!--
+    <section id="ltd_map_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="map">
+                <h1>located THE MAP</h1><a href="#slidingDiv" class="show_hide" rel="#slidingDiv"><i class="fa fa-angle-up"></i></a>
+                <div id="slidingDiv">
+                    <div class="map_area">
+                        <div id="googleMap" style="width:100%;height:300px;"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    End located map  Section -->
+
+    <!-- start footer Section -->
+    <footer id="ft_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ft">
+                        <ul>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href=""><i class="fa fa-rss"></i></a></li>
+                            <li><a href=""><i class="fa fa-flickr"></i></a></li>
+                            <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fa fa-skype"></i></a></li>
+                            <li><a href=""><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                    <ul class="copy_right">
+                        <li>&copy;Sima 2015</li>
+                        <li>developer by md. shiddikur rahman</li>
+                        <li>programming by Wilson Falcão</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Section -->
+
+    <script src="~/Content/js/jquery-1.11.3.min.js"></script>
+    <script src="~/Content/js/isotope.pkgd.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/appear.js"></script>
+    <script src="~/Content/js/owl.carousel.min.js"></script>
+    <script src="~/Content/js/jquery.nicescroll.min.js"></script>
+    <script src="~/Content/js/jquery.easing.min.js"></script>
+    <script src="~/Content/js/scrolling-nav.js"></script>
+    <script src="~/Content/js/script_photo.js"></script>
+    <script src="Content/js/main.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 500
+            });
+        });
+    </script>
+    <script>
+
+        //Hide Overflow of Body on DOM Ready //
+        $(document).ready(function () {
+            $("body").css("overflow", "hidden");
+        });
+
+        // Show Overflow of Body when Everything has Loaded
+        $(window).load(function () {
+            $("body").css("overflow", "visible");
+            var nice = $('html').niceScroll({
+                cursorborder: "5",
+                cursorcolor: "#00AFF0",
+                cursorwidth: "3px",
+                boxzoom: true,
+                autohidemode: true
+            });
+
+        });
+    </script>
+</body>
+</html>

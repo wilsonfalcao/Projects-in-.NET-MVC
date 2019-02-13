@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cond_peninsulaModelStoreContainer" CdmEntityContainer="cond_peninsulaEntities2">
+    <EntitySetMapping Name="cadastro_moradia">
+      <EntityTypeMapping TypeName="cond_peninsulaModel.cadastro_moradia">
+        <MappingFragment StoreEntitySet="cadastro_moradia">
+          <ScalarProperty Name="id_moradia" ColumnName="id_moradia" />
+          <ScalarProperty Name="lugar_posicionamento" ColumnName="lugar_posicionamento" />
+          <ScalarProperty Name="inquilino" ColumnName="inquilino" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="numero_moradia" ColumnName="numero_moradia" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cadastro_usuario">
+      <EntityTypeMapping TypeName="cond_peninsulaModel.cadastro_usuario">
+        <MappingFragment StoreEntitySet="cadastro_usuario">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="tp_user" ColumnName="tp_user" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="d_bordo_s1">
+      <EntityTypeMapping TypeName="cond_peninsulaModel.d_bordo_s1">
+        <MappingFragment StoreEntitySet="d_bordo_s1">
+          <ScalarProperty Name="ln" ColumnName="ln" />
+          <ScalarProperty Name="protocolo" ColumnName="protocolo" />
+          <ScalarProperty Name="id_apt" ColumnName="id_apt" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="t_problema" ColumnName="t_problema" />
+          <ScalarProperty Name="problema" ColumnName="problema" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,107 @@
+﻿@model MvcApplication4.Controllers.Body_
+@{
+    ViewBag.Title = "Diario_Bordo_C";
+    Layout = "~/Views/_Shared.cshtml";
+}
+<!--CSS-->
+<!-- jQuery -->
+<div class="col-md-12">
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Inbox</h3>
+                  <div class="box-tools pull-right">
+                    <div class="has-feedback">
+                        <div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filtrar <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Mês Atual</a></li>
+    <li><a href="#">Mês Anterior</a></li>
+    <li><a href="#">Customizar</a></li>
+  </ul>
+</div>
+                    </div>
+                  </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body no-padding">
+                    @*Controles do E-mailBox*@
+                    @*Layout de Exbição E-mail*@
+                  <div class="table-responsive mailbox-messages">
+                    <table class="table table-hover table-striped">
+                      <tbody>
+                          @foreach(var Data_Bordo in Model.Listar_Bordo as IEnumerable<MvcApplication4.Controllers.Model_Body_>)
+                          {
+                          <tr>
+                          <td>@Html.ActionLink(" ","Diario_Bordo_Apagar", "Diario", new { id = Data_Bordo.d_bordo_s1_protocolo }, new {@class= "icon" })</td>
+                              @if (Data_Bordo.d_bordo_s1_user_at == 7)
+                              {
+                                 <td class="mailbox-star"><i class="fa fa-send"></i></td>
+                                  <td class="mailbox-n ame">@Html.ActionLink(Data_Bordo.cadastro_usuario_nome, "Diario_Bordo_Leituras", "Diario", new { id = Data_Bordo.d_bordo_s1_protocolo }, null)</td>
+                              }
+                              @if (Data_Bordo.d_bordo_s1_user_at != 7)
+                              {
+                                 <td class="mailbox-star"><i class="fa fa-upload"></i></td>
+                                  <td class="mailbox-n ame">@Html.ActionLink(Data_Bordo.cadastro_usuario_nome2, "Diario_Bordo_Leituras", "Diario", new { id = Data_Bordo.d_bordo_s1_protocolo }, null)</td>
+                              }
+                          @*Abrindo o Chamado para leitura*@
+                          <td class="mailbox-subject"><b>@Data_Bordo.d_bordo_s1_t_problema</b></td>
+                          <td class="mailbox-subject"><b>@Data_Bordo.cadastro_categoria</b></td>
+                          <td class="mailbox-attachment">@Html.ActionLink(" ","Diario_Bordo_Atualizar", "Diario", new { id = Data_Bordo.d_bordo_s1_protocolo }, new {@class= "icon1" })</td>
+                          <td class="mailbox-date">@Data_Bordo.d_bordo_s1_data.ToShortDateString()</td>
+                          </tr>
+                          }
+                      </tbody>
+                    </table><!-- /.table -->
+                  </div><!-- /.mail-box-messages -->
+                </div><!-- /.box-body -->
+                <div class="box-footer no-padding">
+                </div>
+              </div><!-- /. box -->
+            </div>
+<script type="text/javascript">
+      $(function () {
+        //Enable iCheck plugin for checkboxes
+        //iCheck for checkbox and radio inputs
+        $(".mailbox-messages input[type='checkbox']").iCheck({
+          checkboxClass: "icheckbox_flat-blue",
+          radioClass: "iradio_flat-blue"
+        });
+
+        //Enable check and uncheck all functionality
+        $(".checkbox-toggle").click(function () {
+          var clicks = $(this).data("clicks");
+          if (clicks) {
+            //Uncheck all checkboxes
+            $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
+            $(".fa", this).removeClass("fa-check-square-o").addClass("fa-square-o");
+          } else {
+            //Check all checkboxes
+            $(".mailbox-messages input[type='checkbox']").iCheck("check");
+            $(".fa", this).removeClass("fa-square-o").addClass("fa-check-square-o");
+          }
+          $(this).data("clicks", !clicks);
+        });
+
+        //Handle starring for glyphicon and font awesome
+        $(".mailbox-star").click(function (e) {
+          e.preventDefault();
+          //detect type
+          var $this = $(this).find("a > i");
+          var glyph = $this.hasClass("glyphicon");
+          var fa = $this.hasClass("fa");
+
+          //Switch states
+          if (glyph) {
+            $this.toggleClass("glyphicon-star");
+            $this.toggleClass("glyphicon-star-empty");
+          }
+
+          if (fa) {
+            $this.toggleClass("fa-star");
+            $this.toggleClass("fa-star-o");
+          }
+        });
+      });
+    </script>
+

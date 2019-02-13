@@ -1,0 +1,571 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Gudea);
+
+body {
+	background-color: #312747;
+	font-family: 'Gudea', Arial, sans-serif;
+    overflow-y: hidden;
+}
+
+/***************Main************************/
+h1 {
+	color: white;
+	margin: 35px 0 35px 40px;
+	font-size: 32pt;
+	letter-spacing: 4px;
+	width: 900px;
+}
+
+h2 {
+	position: relative;
+	color: white;
+	font-size: 15pt;
+	letter-spacing: 1px;
+}
+h3 {
+	color: white;
+	margin: -25px 0 0px 4px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+	width: 900px;
+}
+header h1{
+	color: white;
+	margin: 20px 0px 35px 40px;
+	font-size: 32pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+}
+header h2{
+	color: white;
+	margin: 23px;
+    right: -750px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+header h3{
+	color: white;
+	margin: 43px;
+    right: -790px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+.userfoto{
+	width:60px;position: fixed;margin: 16px; right: -10px;border-radius: 10px;
+}
+.container {
+    position: absolute;
+    margin: 50px 0px;
+	width: 1600px;
+    height: 800px;
+}
+.container > li > a:hover {
+  text-decoration: none;
+}
+.divblock1 {
+	width: 565px;
+    height: 433px;
+	position: relative;
+}
+.divblock2 {
+	width: 565px;
+    height: 433px;
+	position: relative;
+	left: 600px;
+    bottom: 463px;
+}
+.divblock3 {
+	width: 320px;
+	padding: 0;
+	position: fixed;
+	left: 729px;
+}
+.divblock4 {
+	width: 565px;
+    height: 433px;
+	position: relative;
+	left:1200px;
+    bottom: 927px;
+}
+.divblock5 {
+	width: 470px;
+	padding: 0;
+    bottom: 1541px;
+	left: 1530px;
+	position: relative;
+}
+img {
+	padding: 1.2px;
+}
+#bigimgsize{
+	width: 307px;
+	height: 150px;
+}
+#imgsize {
+	width: 147px;
+	height: 148px;
+}
+#vbig {
+	width: 306px;
+	height: 306px;
+}
+/**************Quadrantes********************/
+a.wide, a.box{
+	text-decoration:none;
+	color:#fff;
+	-webkit-transition: -webkit-transform 0.1s;
+	position:relative;
+	overflow:hidden;
+}
+a.wide h2, a.box h2{
+	position:absolute;
+	bottom:5px;
+	font-size:14px;
+}
+a.wide h2.top, a.box h2.top{
+	position:static;
+
+	font-size:14px;
+}
+a.wide i, a.box i{
+font-size: 70px;
+text-align: center;
+display: block;
+margin-top: 5px; /* outside Codepen is actually 30px */
+}
+a.wide:hover, a.box:hover{
+	-webkit-transform: scale(1.05);
+}
+a.wide:active, a.box:active{
+	-webkit-transform: scale(1);
+}
+.wide{
+	width:23.23%;
+    height: 25%;
+	overflow:hidden;
+	display:block;
+	float:left;
+	margin:5px;
+}
+.wide h3 {
+	color: white;
+	margin: 10% 0 0px 4px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+	width: 900px;
+}
+.wide-medio{
+	width:48.2%;
+    height: 25%;  
+}
+.wide-medio h3 {
+	color: white;
+	margin: 4.55% 0 0px 4px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+	width: 900px;
+}
+.wide-grande{
+  width:48.2%;
+  height: 50%;
+}
+.wide-grande h3 {
+	color: white;
+	margin: -9% 0 0px 4px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+	width: 900px;
+    position: relative;
+    background-color:rgba(0,0,0,0.3);
+}
+.wide-grande2{
+  width:98.2%;
+  height: 77.5%;
+}
+.wide-grande2 h3 {
+	color: white;
+	margin: 43% 0 0px 4px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+	width: 900px;
+}
+.wide-supergrande{
+	width:100%;
+    height: 100%;
+}
+.box{
+	width:120px;
+	height:120px;
+	overflow:hidden;
+	font-size:13px;
+	padding:10px;
+	display:block;
+	float:left;
+	margin:5px;
+}
+.lime{background:#61b812;}
+.orange{background:#e76022;}
+.blue{background:#1E90FF;}
+.redgay{background:#DA312E;}
+.yellow{background:#dbb701;}
+.bluefish{background:#02b9e3;}
+.magenta{background:#d22a4e;}
+.spacer{
+	width:770px;
+	margin-right: 50px;
+	float:left;
+}
+.spacer3x{
+	width:300px;
+}
+@-webkit-keyframes galeri
+{
+1% {background-position: 0px 0px;}
+10%{background-position: 0px 140px;}
+20%{background-position: 0px 140px;}
+30%{background-position: 0px 280px;}
+40%{background-position: 0px 280px;}
+50%{background-position: 0px 420px;}
+60%{background-position: 0px 420px;}
+70%{background-position: 0px 560px;}
+80%{background-position: 0px 560px;}
+100% {background-position: 0px 560px;}
+}
+.gallery{
+	background: url(https://dl.dropbox.com/u/39272011/image_metro.png);
+	-webkit-animation: galeri 15s infinite;
+}
+.right{
+	float:right;
+	text-align:right;
+	margin-top: 30px;
+}
+.right p{
+	margin: 5px 0px;
+}
+img.prof{
+	float: right;
+	margin: 10px;
+	margin-top: 40px;
+}
+.i_bot{
+	font-size: 30px;
+	text-align: left;
+	position: absolute;
+	bottom: 0px;
+}
+.cal_i{
+	margin-top: 20px;
+	margin-left: 15px;
+	width: 155px;
+}
+.cal_e h1{
+	position: absolute;
+	right: 0px;
+	width: 115px;
+	text-align: center;
+	margin: 0px;
+	font-size: 60px;
+}
+.cal_e p{
+	position: absolute;
+	right: 0px;
+	width: 115px;
+	text-align: center;
+	margin-top: 75px;
+	text-transform: uppercase;
+}
+.cal_e i{
+	text-align: left;
+	font-size: 25px !important;
+	position: absolute;
+	bottom: 0px;
+}
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+
+/**************Modal Classes****************/
+.section-modal .modal-content {
+    padding: 100px 0 !important;
+    width:100%;
+    height: 100%;
+overflow-y: hidden;
+    border: 0 !important;
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #888;
+    font-weight: 300;
+}
+.section-modal .close-modal {
+    position: absolute;
+    margin: -75px 0 0 20px;
+    width: 25px;
+    height: 25px;
+    font-size: 200%;
+    background-color:white ;
+    cursor: pointer;
+}
+.section-modal .close-modal:hover {
+    opacity: .3;
+}
+.section-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 25px;
+    margin-left: 25px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.section-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color:#d22a4e;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.containerview h1 {
+    color: black;
+	margin: -70px 0 0 60px;
+	font-size: 12pt;
+	letter-spacing: 4px;
+    width: auto;
+}
+.area1
+{
+    position: absolute;
+    margin: 40px 0 0 60px;
+    width: 70%;
+    line-height: 3;
+}
+
+/*Stylus de Propriedades Individuais*/
+
+.foot-button button {
+    width:200px;
+    margin:40px 50%;
+    font-size:20px;
+}
+#nome {
+    width:400px;
+}
+#pid {
+    width:100px;
+}
+#email {
+    width:260px;
+}
+#local {
+    width:300px;
+}
+#protocolo {
+    width:100%;
+    font-size: 30px;
+    text-align:center;
+}
+#t_problema {
+    width:400px;
+}
+#texto {
+    width:740px;
+    height:110px;
+}
+#tp_chamado {
+    width:190px;
+}
+.col-sm-12 {
+    left:-15px;
+}
+
+
+
+
+/***************Screen 1024px************************/
+@media screen and (max-width: 1024px){
+header h1{
+	color: white;
+	margin: 20px 0px 35px 40px;
+	font-size: 22pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+}
+header h2{
+	color: white;
+	margin: 23px;
+    right: -780px;
+	font-size: 8pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+header h3{
+	color: white;
+	margin: 43px;
+    right: -820px;
+	font-size: 8pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+.area1
+{
+    position: relative;
+    margin: 40px 0 0;
+    width:90%;
+    line-height: 1.5;
+}
+.section-modal .close-modal {
+    position: absolute;
+    margin: -75px 0 0 20px;
+    width: 25px;
+    height: 25px;
+    background-color:white ;
+    cursor: pointer;
+}
+#nome {
+        width:300px;
+    }
+#protocolo {
+    width:110%;
+    font-size: 30px;
+    text-align:center;
+}
+#texto {
+    width:300px;
+    height:100px;
+}
+#tp_problema {
+    width:300px;
+}
+#tp_chamado {
+    width:300px;
+}
+#t_problema {
+    width:300px;
+}
+#tecnico {
+        width:300px;
+    }
+#area {
+        width:300px;
+    }
+#tomb {
+        width:300px;
+    }
+    #local {
+        width:300px;
+    }
+    #pid {
+    width:300px;
+    }
+    #email {
+        width: 300px;
+    }
+.foot-button button {
+    width:200px;
+    margin:40px 15%;
+    font-size:20px;
+}
+}
+/***************Screen 1280px***********************/
+@media screen and (min-width: 1124px) and (max-width: 1280px){
+header h1{
+	color: white;
+	margin: 20px 0px 35px 40px;
+	font-size: 32pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+}
+header h2{
+	color: white;
+	margin: 23px;
+    right: -775px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+header h3{
+	color: white;
+	margin: 43px;
+    right: -810px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+.container {
+    position: absolute;
+    margin: 50px -40px;
+	width: 1200px;
+}	
+}
+
+/***************Screen 1366px***********************/
+@media screen and (min-width: 1300px) and (max-width: 1400px){
+header h1{
+	color: white;
+	margin: 20px 0px 35px 40px;
+	font-size: 32pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+}
+header h2{
+	color: white;
+	margin: 20px;
+    right: -775px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+header h3{
+	color: white;
+	margin: 43px;
+    right: -810px;
+	font-size: 10pt;
+	letter-spacing: 4px;
+    position:fixed;
+    overflow-x: hidden;
+    width: 900px;
+}
+.container {
+    position: absolute;
+    margin: 50px -40px;
+	width: 1200px;
+}
+}

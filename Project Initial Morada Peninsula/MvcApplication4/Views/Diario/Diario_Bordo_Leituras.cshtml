@@ -1,0 +1,35 @@
+﻿@model MvcApplication4.Controllers.Body_
+@{
+    ViewBag.Title = "Diario_Bordo_Leitura";
+    Layout = "~/Views/_Shared.cshtml";
+}
+
+<div class="col-md-12">
+     <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Leitura de Diário de Bordo</h3>
+                </div><!-- /.box-header -->
+              @foreach(var Data_Bordo in Model.Listar_Bordo as IEnumerable<MvcApplication4.Controllers.Model_Body_>)
+                 {
+                <div class="box-body no-padding">
+                  <div class="mailbox-read-info">
+                    <h3>@Data_Bordo.d_bordo_s1_t_problema</h3>
+                    <h5>Criado por: <strong>@Data_Bordo.cadastro_usuario_nome</strong> <span class="mailbox-read-time pull-right">@Data_Bordo.d_bordo_s1_data</span></h5>
+                    <h5>Atualizado por: <strong>@Data_Bordo.cadastro_usuario_nome2</strong> <span class="mailbox-read-time pull-right">@Data_Bordo.d_bordo_s1_dt_at</span></h5>
+                    <h5>Categoria: <strong>@Data_Bordo.cadastro_categoria</strong></h5>
+                  </div>
+                  <div class="mailbox-read-message">
+                          @Html.Raw(Data_Bordo.d_bordo_s1_problema)
+                  </div><!-- /.mailbox-read-message -->
+                </div><!-- /.box-body -->
+                <div class="box-footer">
+                    <center><h1>Protocolo:&nbsp&nbsp @Data_Bordo.d_bordo_s1_protocolo</h1></center>
+                </div>
+                <div class="box-footer">
+                  <button class="btn btn-default">@Html.ActionLink(" Deletar","Diario_Bordo_Apagar", "Diario", new { id = Data_Bordo.d_bordo_s1_protocolo }, new {@class= "icon" })</button>
+                  <a href="@Url.Action("Diario_Bordo_C", "Diario")"><button class="btn btn-default"><i class="fa fa-arrow-left"></i> Voltar</button></a>
+                  <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+                </div><!-- /.box-footer -->
+              }
+              </div>
+</div>
